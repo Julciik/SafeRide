@@ -1,0 +1,33 @@
+{
+  "name": "saferidewebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "ansi-colors": "^4.1.1",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-image": "^5.1.0",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-sass": "^4.0.2",
+    "webpack-stream": "^5.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Julciik/SafeRide.git"
+  },
+  "author": "Julcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Julciik/SafeRide/issues"
+  },
+  "homepage": "https://github.com/Julciik/SafeRide#readme"
+}
