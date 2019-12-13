@@ -5,7 +5,7 @@ const autoprefixer = require("gulp-autoprefixer");
 const colors = require("ansi-colors");
 const csso = require("gulp-csso");
 const browserSync = require("browser-sync").create();
-const webpack = require("webpack-stream");
+const concat = require("gulp-concat");
 const nunjucksRender = require("gulp-nunjucks-render");
 const image = require("gulp-image");
 
@@ -62,13 +62,12 @@ const scss = function() {
     .pipe(browserSync.stream());
 };
 
-const js = function(cb) {
-  return webpack(require("./webpack.config.js"), function(err, stats) {
-    if (err) throw err;
-    console.log(stats.toString());
-    browserSync.reload();
-    cb();
-  });
+const js = function() {
+  return gulp
+    .src("src/js/**/*")
+    .pipe(concat("index.js"))
+    .pipe(gulp.dest("dist/"))
+    .pipe(browserSync.stream());
 };
 
 const watch = function() {
@@ -76,10 +75,15 @@ const watch = function() {
   gulp
     .watch("src/html/**/*.html", gulp.series(html))
     .on("change", browserSync.reload);
-  gulp.watch("src/images/**", gulp.series(img));
+  gulp
+    .watch("src/images/**", gulp.series(img))
+    .on("change", browserSync.reload);
+  gulp
+    .watch("src/js/**/*.js", gulp.series(js))
+    .on("change", browserSync.reload);
 };
 
-exports.default = gulp.series(server, html, scss, watch, img);
+exports.default = gulp.series(server, html, scss, js, watch);
 exports.img = img;
 exports.scss = scss;
 exports.watch = watch;
