@@ -1,10 +1,10 @@
 $base-unit: 16px;
 
-$font-h1: $base-unit * 5.653;
-$font-h2: $base-unit * 3.998;
-$font-h3: $base-unit * 2.827;
-$font-h4: $base-unit * 1.999;
-$font-h5: $base-unit * 1.414;
+$font-h1: $base-unit * 4.209;
+$font-h2: $base-unit * 3.157;
+$font-h3: $base-unit * 2.369;
+$font-h4: $base-unit * 1.777;
+$font-h5: $base-unit * 1.333;
 $font-body: $base-unit;
 
 $base-font: "Open Sans", sans-serif;
@@ -18,7 +18,12 @@ $white: #fff;
 $black: #000;
 $blue: #e7f8ff;
 
-$mobile-width: 360px;
+$mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
 $ldesktop-width: 1920px;
+
+$logo-width: 420px;
+$logo-height: 225px;
+
+$nav-height: 150px;
