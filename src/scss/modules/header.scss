@@ -40,11 +40,7 @@
         @media (min-width: $tablet-width) {
           width: $logo-width * 0.5;
           height: $logo-height * 0.5;
-        }
-
-        @media (min-width: $desktop-width) {
-          width: $logo-width * 0.7;
-          height: $logo-height * 0.7;
+          transition: all 0.5s linear;
         }
       }
     }
@@ -63,7 +59,6 @@
         position: static;
         opacity: 1;
         text-align: left;
-        transition: none;
       }
 
       .menu__list {
@@ -126,6 +121,7 @@
 
             @media (min-width: $tablet-width) {
               font-size: $base-unit;
+              transition: all 0.5s linear;
 
               &::after {
                 content: "";
@@ -222,6 +218,37 @@
           .hamburger__line--third {
             bottom: -1px;
             transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+
+    &--fixed {
+      @media (min-width: $tablet-width) {
+        align-items: center;
+        position: fixed;
+        padding: 10px 40px;
+        background-color: rgba(255, 255, 255, 0.9);
+
+        .nav__logo {
+          .logo__img {
+            width: $logo-width * 0.2;
+            height: $logo-height * 0.2;
+            opacity: 1;
+          }
+        }
+
+        .nav__menu {
+          .menu__list {
+            .list__item {
+              .list__link {
+                font-size: $base-unit;
+
+                &::after {
+                  height: 1px;
+                }
+              }
+            }
           }
         }
       }
