@@ -1,0 +1,138 @@
+.about {
+  @media (min-width: $mobile-width) {
+    overflow: hidden;
+    padding: 100px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px;
+  }
+
+  &__logo {
+    @media (min-width: $mobile-width) {
+      text-align: center;
+      margin-bottom: 100px;
+      padding: 0 10px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 100%;
+    }
+
+    .logo__header {
+      @media (min-width: $mobile-width) {
+        z-index: 1;
+        display: inline-block;
+        position: relative;
+        font-size: $font-h2;
+
+        &::after {
+          content: "";
+          z-index: -1;
+          min-width: 450px;
+          height: 30px;
+          position: absolute;
+          right: -20px;
+          bottom: -15px;
+          background-color: $blue;
+        }
+      }
+
+      @media (min-width: $desktop-width) {
+        font-size: $font-h1;
+      }
+    }
+  }
+
+  &__img {
+    @media (min-width: $mobile-width) {
+      width: 100vw;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 45%;
+    }
+
+    .img__container {
+      @media (min-width: $mobile-width) {
+        width: 100%;
+        height: 100%;
+        background-image: url("../images/about/smartwatch.png");
+        background-position: center;
+        background-size: cover;
+      }
+
+      @media (min-width: $desktop-width) {
+        transition: transform 0.5s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  &__info {
+    @media (min-width: $mobile-width) {
+      margin-top: 100px;
+      padding: 0 20px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding: 0 100px;
+      text-align: justify;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0;
+      margin: 0;
+      width: 45%;
+    }
+
+    .info__header {
+      @media (min-width: $mobile-width) {
+        position: relative;
+        display: inline-block;
+        font-size: $font-h3;
+        margin-bottom: 50px;
+
+        &::after {
+          content: "";
+          z-index: -1;
+          min-width: 250px;
+          height: 30px;
+          position: absolute;
+          right: -20px;
+          bottom: -15px;
+          background-color: $blue;
+        }
+      }
+
+      @media (min-width: $desktop-width) {
+        font-size: $font-h2;
+      }
+    }
+
+    .info__paragraph {
+      @media (min-width: $mobile-width) {
+        letter-spacing: 0.6pt;
+        line-height: 20px;
+      }
+
+      @media (min-width: $desktop-width) {
+        font-size: $font-h5;
+        line-height: 25px;
+      }
+    }
+  }
+}

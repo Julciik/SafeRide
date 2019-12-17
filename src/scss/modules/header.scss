@@ -225,6 +225,7 @@
 
     &--fixed {
       @media (min-width: $tablet-width) {
+        z-index: 99;
         align-items: center;
         position: fixed;
         padding: 10px 40px;
