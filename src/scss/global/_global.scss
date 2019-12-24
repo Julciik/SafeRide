@@ -1,4 +1,6 @@
-* {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
@@ -14,7 +16,9 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+::after,
+::before {
   font-family: $header-font;
   font-weight: $extra-bold;
 }

@@ -9,7 +9,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 200px;
+    height: 1400px;
+    padding: 200px 0 0 0;
   }
 
   &__logo {
@@ -82,7 +83,6 @@
       position: absolute;
       top: 200px;
       left: -20%;
-      margin-bottom: 200px;
       overflow: hidden;
     }
 
