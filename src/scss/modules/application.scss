@@ -1,4 +1,4 @@
-.about {
+.app {
   position: relative;
   @media (min-width: $desktop-width) {
     height: 1200px;
@@ -14,7 +14,7 @@
       margin-bottom: 200px;
     }
 
-    .about__header {
+    .app__header {
       @media (min-width: $mobile-width) {
         margin: 0 20px;
         font-size: $font-h2;
@@ -41,10 +41,9 @@
       width: 70%;
       height: 650px;
       display: flex;
-      justify-content: flex-end;
       align-items: center;
       position: absolute;
-      right: 0;
+      left: 100px;
       margin: 0 100px 0 0;
       padding: 100px;
     }
@@ -56,28 +55,20 @@
     }
 
     @media (min-width: $desktop-width) {
-      width: 50%;
+      width: 40%;
       position: absolute;
       top: 200px;
-      left: -20%;
+      right: -20%;
       overflow: hidden;
     }
 
-    .aboutImg__container {
+    .appImg__container {
       @media (min-width: $mobile-width) {
         width: 100%;
         height: 100%;
-        background-image: url("../images/about/smartwatch.jpg");
+        background-image: url("../images/application/profile.png");
         background-position: center;
         background-size: cover;
-      }
-
-      @media (min-width: $desktop-width) {
-        transition: transform 0.5s ease-in-out;
-
-        &:hover {
-          transform: scale(1.1);
-        }
       }
     }
   }
@@ -98,7 +89,7 @@
       width: 60%;
     }
 
-    .about__subtitle {
+    .app__subtitle {
       @media (min-width: $mobile-width) {
         font-size: $font-h3;
         margin-bottom: 30px;
@@ -108,9 +99,13 @@
         font-size: $font-h2;
         margin-bottom: 50px;
       }
+
+      @media (min-width: $desktop-width) {
+        white-space: nowrap;
+      }
     }
 
-    .about__paragraph {
+    .app__paragraph {
       @media (min-width: $mobile-width) {
         line-height: 35px;
       }

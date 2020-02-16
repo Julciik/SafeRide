@@ -16,15 +16,9 @@ h1,
 h2,
 h3,
 h4,
-h5,
-::after,
-::before {
+h5 {
   font-family: $header-font;
   font-weight: $extra-bold;
-}
-
-p {
-  font-family: $base-font;
 }
 
 h1 {
@@ -45,4 +39,39 @@ h4 {
 
 h5 {
   font-size: $font-h5;
+}
+
+h1,
+h2 {
+  z-index: 1;
+  display: inline-block;
+  position: relative;
+}
+
+h1::after,
+h2::after {
+  content: "";
+  z-index: -1;
+  width: 60%;
+  height: 30px;
+  position: absolute;
+  right: -20px;
+  bottom: -5px;
+  background-color: $blue;
+}
+
+p {
+  font-family: $base-font;
+}
+
+.section {
+  @media (min-width: $mobile-width) {
+    padding-top: 100px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 100px;
+    margin-bottom: 100px;
+  }
 }

@@ -3,6 +3,10 @@
     padding: 100px 0;
   }
 
+  @media (min-width: $desktop-width) {
+    margin-bottom: 100px;
+  }
+
   &__logo {
     @media (min-width: $mobile-width) {
       text-align: center;
@@ -13,24 +17,7 @@
       margin-bottom: 200px;
     }
 
-    .logo__header {
-      @media (min-width: $mobile-width) {
-        z-index: 1;
-        display: inline-block;
-        position: relative;
-
-        &::after {
-          content: "";
-          z-index: -1;
-          min-width: 150px;
-          height: 30px;
-          position: absolute;
-          right: -20px;
-          bottom: -15px;
-          background-color: $blue;
-        }
-      }
-
+    .functions__header {
       @media (min-width: $tablet-width) {
         font-size: $font-h1;
       }

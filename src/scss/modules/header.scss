@@ -1,6 +1,13 @@
 .header {
   width: 100vw;
   height: 100vh;
+  @media (min-width: $mobile-width) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 100px;
+  }
 
   &__nav {
     @media (min-width: $mobile-width) {
