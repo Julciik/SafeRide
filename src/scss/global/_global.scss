@@ -64,6 +64,10 @@ p {
   font-family: $base-font;
 }
 
+label {
+  font-family: $base-font;
+}
+
 .section {
   @media (min-width: $mobile-width) {
     padding-top: 100px;
