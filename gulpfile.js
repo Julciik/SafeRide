@@ -1,4 +1,5 @@
 const gulp = require("gulp");
+var deploy = require("gulp-gh-pages");
 const sass = require("gulp-sass");
 const sourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("gulp-autoprefixer");
@@ -83,9 +84,14 @@ const watch = function() {
     .on("change", browserSync.reload);
 };
 
+const deploy = function() {
+  return gulp.src("./dist/**/*").pipe(deploy());
+};
+
 exports.default = gulp.series(server, html, scss, js, watch);
 exports.img = img;
 exports.scss = scss;
 exports.watch = watch;
 exports.js = js;
 exports.html = html;
+exports.deploy = deploy;
